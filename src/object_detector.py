@@ -2,11 +2,22 @@ import cv2
 from ultralytics import YOLO
 import numpy as np
 import time
+import os
 
 class ObjectDetector:
     def __init__(self):
+        # Create models directory if it doesn't exist
+        models_dir = 'assets/models'
+        os.makedirs(models_dir, exist_ok=True)
+        
         # Initialize YOLO model
-        self.model = YOLO('yolov8n.pt')  # Using the nano model for initial testing
+        model_path = f'{models_dir}/yolov8n.pt'
+        self.model = YOLO('yolov8n.pt')  # First run will download to current directory
+        
+        # Move the model file if it's in the root directory
+        if os.path.exists('yolov8n.pt'):
+            os.rename('yolov8n.pt', model_path)
+            self.model = YOLO(model_path)
         
         # Classes we're interested in for navigation
         self.target_classes = [

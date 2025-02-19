@@ -4,7 +4,7 @@ def main():
     processor = VideoProcessor()
     
     # Replace with your video file path
-    video_path = 'path/to/your/video.mp4'
+    video_path = 'assets/input/videos/1university_video.mp4'
     
     processor.process_video(video_path)
 

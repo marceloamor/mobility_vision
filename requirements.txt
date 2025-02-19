@@ -1,0 +1,13 @@
+# Core dependencies
+ultralytics>=8.0.0
+opencv-python>=4.8.0
+numpy>=1.24.0
+
+# Optional but recommended for GPU acceleration
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Development tools (optional)
+pytest>=7.4.0
+black>=23.7.0
+flake8>=6.1.0 

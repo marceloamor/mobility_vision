@@ -41,6 +41,19 @@ ENV/
 logs/
 output/
 
+# Assets
+assets/input/*
+assets/output/*
+# Keep the directory structure
+!assets/input/.gitkeep
+!assets/input/videos/.gitkeep
+!assets/input/images/.gitkeep
+!assets/output/.gitkeep
+!assets/output/annotated_videos/.gitkeep
+!assets/output/annotated_images/.gitkeep
+!assets/output/logs/.gitkeep
+!assets/models/.gitkeep
+
 # OS specific
 .DS_Store
 Thumbs.db 
